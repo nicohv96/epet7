@@ -1,0 +1,38 @@
+[
+    {
+        "image": "../../assets/img/cards/cuarto/img1.webp",
+        "name": "Aula segura",
+        "url": "https://youtu.be/kZNCKSbXrmY?si=zNJUpdXNBxVHA97I",
+        "desc": "Permite la comunicación entre la escuela y las familias."
+    },
+    {
+        "image": "../../assets/img/cards/cuarto/img2.webp",
+        "name": "Kiari Accesorios",
+        "url": "https://youtu.be/ONsv_hzvmHc?feature=shared",
+        "desc": "Catálogo web para un emprendimiento."
+    },
+    {
+        "image": "../../assets/img/cards/cuarto/img3.webp",
+        "name": "Web para adoptar mascotas",
+        "url": "https://youtu.be/W-qGq9tffnI?si=pcI79GXSRwbHJQcx",
+        "desc": "Acerca las mascotas a las personas con esta web."
+    },
+    {
+        "image": "../../assets/img/cards/cuarto/img4.webp",
+        "name": "Correo ficticio",
+        "url": "https://youtu.be/eYHIt-N931k?feature=shared",
+        "desc": "Gestión de paquetería."
+    },
+    {
+        "image": "../../assets/img/cards/cuarto/img5.webp",
+        "name": "Eggman's Claw Machine",
+        "url": "https://youtu.be/lgTJdZEUK9s?si=Sv9MKxdSi3JDLtZK",
+        "desc": "Recreación de videojuego creado con Scratch."
+    },
+    {
+        "image": "../../assets/img/cards/cuarto/img6.webp",
+        "name": "Planeta verde",
+        "url": "https://youtube.com/shorts/IxUwQRNT1MI?si=zSF6iuyDWHpRTigv",
+        "desc": "Web interactiva para aprender sobre el cambio climático."
+    }
+]
