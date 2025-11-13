@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E.P.E.T. N°7 Vicente Arcadio Salemi | Tecnicatura en Programación</title>
+    <link rel="icon" href="./assets/icons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <canvas id="matrixCanvas"></canvas>
+
+    <!-- ===== HERO ===== -->
+    <div id="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <div class="img-content">
+                <img src="./assets/img/hero/img-shield.webp" alt="Logo EPET N°7">
+            </div>
+            <h1>E.P.E.T. N°7 “Vicente Arcadio Salemi”</h1>
+            <p>Tecnicatura en Programación | Innovación, Lógica y Futuro</p>
+        </div>
+        <div class="carousel">
+            <img src="./assets/img/hero/img-hero-1.webp" class="active" alt="Programación 1">
+            <img src="./assets/img/hero/img-hero-2.webp" alt="Programación 2">
+            <img src="./assets/img/hero/img-hero-3.webp" alt="Programación 3">
+            <img src="./assets/img/hero/img-hero-4.webp" alt="Programación 5">
+            <img src="./assets/img/hero/img-hero-5.webp" alt="Programación 5">
+            <button id="prev">&#10094;</button>
+            <button id="next">&#10095;</button>
+        </div>
+    </div>
+
+    <!-- ===== PROYECTOS ===== -->
+    <section id="projects" class="projects">
+        <div class="section-header">
+            <h2 class="section-title">Proyectos destacados</h2>
+            <p class="section-subtitle">
+                Descubrí los increíbles proyectos creados por nuestros estudiantes. Cada
+                trabajo representa un paso más en su camino de aprendizaje.
+            </p>
+        </div>
+        <div class="year">Proyectos de 4° Año</div>
+        <div id="project-grid-1" class="container" data-animate="fade-up"></div>
+
+        <div class="year">Proyectos de 5° Año</div>
+        <div id="project-grid-2" class="container" data-animate="fade-left"></div>
+
+        <div class="year">Proyectos de 6° Año</div>
+        <div id="project-grid-3" class="container" data-animate="fade-right"></div>
+
+        <div class="year">Proyectos de 7° Año</div>
+        <div id="project-grid-4" class="container" data-animate="zoom-in"></div>
+    </section>
+
+    <footer>
+        <p>E.P.E.T. N°7 “Vicente Arcadio Salemi” - Tecnicatura en Programación © 2025</p>
+    </footer>
+
+    <a href="#hero" class="top-button" id="topButton">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-up"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5" />
+        </svg>
+    </a>
+
+    <!-- ===== MODAL VIDEO ===== -->
+    <div id="videoModal">
+        <span id="closeModal">&times;</span>
+        <div id="videoContainer"></div>
+    </div>
+
+    <div id="preloader">
+        <div class="loader">
+            <div class="cell d-0"></div>
+            <div class="cell d-1"></div>
+            <div class="cell d-2"></div>
+
+            <div class="cell d-1"></div>
+            <div class="cell d-2"></div>
+
+            <div class="cell d-2"></div>
+            <div class="cell d-3"></div>
+
+            <div class="cell d-3"></div>
+            <div class="cell d-4"></div>
+        </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+
+    <script>
+        document.body.classList.add("loading");
+
+        window.addEventListener("load", () => {
+            setTimeout(() => {
+                document.getElementById("preloader").style.opacity = "0";
+                document.body.classList.remove("loading");
+
+                setTimeout(() => {
+                    document.getElementById("preloader").style.display = "none";
+                    document.getElementById("content").style.display = "block";
+                }, 300); // Espera a que se desvanezca
+            }, 1100); // Duración mínima del preloader
+        });
+
+    </script>
+
+</body>
+
+</html>
