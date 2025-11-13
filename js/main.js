@@ -2,9 +2,12 @@
 const canvas = document.getElementById("matrixCanvas");
 const ctx = canvas.getContext("2d");
 
-// Ajustar tamaño inicial
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+// Ajustar tamaño inicial (viewport estable)
+function ajustarCanvas() {
+  canvas.width = document.documentElement.clientWidth;
+  canvas.height = document.documentElement.clientHeight;
+}
+ajustarCanvas();
 
 // Etiquetas aleatorias
 const etiquetas = [
@@ -44,7 +47,7 @@ let drops = Array.from({ length: columns }, () =>
 );
 
 // Velocidades aleatorias por columna
-let speeds = Array.from({ length: columns }, () => Math.random() * 0.3 + 0.1);
+let speeds = Array.from({ length: columns }, () => Math.random() * 0.01 + 0.1);
 
 // Función principal de dibujo
 function drawMatrix() {
@@ -71,21 +74,21 @@ function drawMatrix() {
 
     drops[i] += speeds[i];
   }
+
+  requestAnimationFrame(drawMatrix);
 }
 
-// Redibujar cada 50ms
-setInterval(drawMatrix, 50);
-
-// Reajustar al cambiar el tamaño de la ventana
+// Evitar reinicio constante de la animación en móviles
+let resizeTimeout;
 window.addEventListener("resize", () => {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-  columns = Math.floor(canvas.width / fontSize);
-  drops = Array.from({ length: columns }, () =>
-    Math.random() * (canvas.height / fontSize)
-  );
-  speeds = Array.from({ length: columns }, () => Math.random() * 0.3 + 0.1);
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(() => {
+    ajustarCanvas();
+  }, 250);
 });
+
+drawMatrix();
+
 
 
 ///* ===== CAROUSEL ===== */
