@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [
     {
         "image": "../../assets/img/cards/septimo/img1.webp",
@@ -18,3 +19,26 @@
         "desc": "Página de presentación para una empresa de reparación."
     }
 ]
+=======
+[
+    {
+        "image": "assets/img/cards/septimo/img1.webp",
+        "name": "Construction Company",
+        "url": "https://www.youtube.com/watch?v=GFV2j-iYXOc",
+        "desc": "Página de presentación para una empresa constructora."
+    },
+    {
+        "image": "assets/img/cards/septimo/img2.webp",
+        "name": "DentalSmile",
+        "url": "https://www.youtube.com/watch?v=qZJk4LYISLI",
+        "desc": "Página de presentación para una clinica dental."
+    },
+    {
+        "image": "assets/img/cards/septimo/img3.webp",
+        "name": "Reparatech",
+        "url": "https://www.youtube.com/watch?v=o6CnDI5q0Xs",
+        "desc": "Página de presentación para una empresa de reparación."
+    }
+]
+
+>>>>>>> 85021ed732bb34cf40d746c977fd1bf81bcdff42
