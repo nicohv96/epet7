@@ -2,12 +2,9 @@
 const canvas = document.getElementById("matrixCanvas");
 const ctx = canvas.getContext("2d");
 
-// Ajustar tamaño inicial (viewport estable)
-function ajustarCanvas() {
-  canvas.width = document.documentElement.clientWidth;
-  canvas.height = document.documentElement.clientHeight;
-}
-ajustarCanvas();
+// Ajustar tamaño inicial una sola vez
+canvas.width = document.documentElement.clientWidth;
+canvas.height = document.documentElement.clientHeight;
 
 // Etiquetas aleatorias
 const etiquetas = [
@@ -46,8 +43,8 @@ let drops = Array.from({ length: columns }, () =>
   Math.random() * (canvas.height / fontSize)
 );
 
-// Velocidades aleatorias por columna
-let speeds = Array.from({ length: columns }, () => Math.random() * 0.01 + 0.1);
+// Velocidades más lentas (ajustá como quieras)
+let speeds = Array.from({ length: columns }, () => Math.random() * 0.08 + 0.03);
 
 // Función principal de dibujo
 function drawMatrix() {
@@ -78,18 +75,7 @@ function drawMatrix() {
   requestAnimationFrame(drawMatrix);
 }
 
-// Evitar reinicio constante de la animación en móviles
-let resizeTimeout;
-window.addEventListener("resize", () => {
-  clearTimeout(resizeTimeout);
-  resizeTimeout = setTimeout(() => {
-    ajustarCanvas();
-  }, 250);
-});
-
 drawMatrix();
-
-
 
 ///* ===== CAROUSEL ===== */
 document.addEventListener("DOMContentLoaded", () => {
