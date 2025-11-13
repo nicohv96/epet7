@@ -221,10 +221,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // Configuramos las rutas en el mismo orden que en el HTML
   const rutas = [
-    "../data/cuarto/cuarto.json",
-    "../data/quinto/quinto.json",
-    "../data/sexto/sexto.json",
-    "../data/septimo/septimo.json",
+    "data/cuarto/cuarto.json",
+    "data/quinto/quinto.json",
+    "data/sexto/sexto.json",
+    "data/septimo/septimo.json",
   ];
 
   for (let i = 0; i < rutas.length; i++) {
@@ -292,3 +292,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
   animatedElements.forEach(el => observer.observe(el));
 });
+
