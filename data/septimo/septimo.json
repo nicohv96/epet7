@@ -1,20 +1,21 @@
 [
     {
-        "image": "../../assets/img/cards/septimo/img1.webp",
+        "image": "assets/img/cards/septimo/img1.webp",
         "name": "Construction Company",
         "url": "https://www.youtube.com/watch?v=GFV2j-iYXOc",
         "desc": "Página de presentación para una empresa constructora."
     },
     {
-        "image": "../../assets/img/cards/septimo/img2.webp",
+        "image": "assets/img/cards/septimo/img2.webp",
         "name": "DentalSmile",
         "url": "https://www.youtube.com/watch?v=qZJk4LYISLI",
         "desc": "Página de presentación para una clinica dental."
     },
     {
-        "image": "../../assets/img/cards/septimo/img3.webp",
+        "image": "assets/img/cards/septimo/img3.webp",
         "name": "Reparatech",
         "url": "https://www.youtube.com/watch?v=o6CnDI5q0Xs",
         "desc": "Página de presentación para una empresa de reparación."
     }
 ]
+
