@@ -39,8 +39,9 @@ const fontSize = 30;
 let columns = Math.floor(canvas.width / fontSize);
 
 // Posiciones iniciales aleatorias
-let drops = Array.from({ length: columns }, () =>
-  Math.random() * (canvas.height / fontSize)
+let drops = Array.from(
+  { length: columns },
+  () => Math.random() * (canvas.height / fontSize)
 );
 
 // Velocidades más lentas (ajustá como quieras)
@@ -86,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let interval;
 
   function showImage(index) {
-    images.forEach(img => img.classList.remove("active"));
+    images.forEach((img) => img.classList.remove("active"));
     images[index].classList.add("active");
   }
 
@@ -130,7 +131,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 200); // pequeño delay para que cargue la primera imagen
   });
 });
-
 
 /* ===== ANIMACION CARDS ===== 
 function animateCards() {
@@ -205,10 +205,9 @@ window.addEventListener("scroll", () => {
 });
 
 document.addEventListener("DOMContentLoaded", async () => {
-  const years = document.querySelectorAll(".projects .year"); // Selecciona todas las etiquetas .year
-  const grids = document.querySelectorAll(".projects .container"); // Selecciona todos los contenedores
+  const years = document.querySelectorAll(".projects .year");
+  const grids = document.querySelectorAll(".projects .container");
 
-  // Configuramos las rutas en el mismo orden que en el HTML
   const rutas = [
     "data/cuarto/cuarto.json",
     "data/quinto/quinto.json",
@@ -223,27 +222,23 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     try {
       const response = await fetch(url);
-
-      if (!response.ok) {
-        throw new Error(`Error al cargar: ${url}`);
-      }
+      if (!response.ok) throw new Error(`Error al cargar: ${url}`);
 
       const data = await response.json();
 
-      // Si no hay proyectos, ocultamos el título y el contenedor
+      // Ocultar si no hay proyectos
       if (!data || data.length === 0) {
         yearTitle.style.display = "none";
         grid.style.display = "none";
         continue;
       }
 
-      // Si hay proyectos, los agregamos
+      // Crear las cards
       data.forEach((project) => {
-        const link = document.createElement("a");
-        link.href = project.url;
-        link.target = "_blank";
-        link.rel = "noopener noreferrer";
-        link.innerHTML = `
+        const card = document.createElement("div");
+        card.classList.add("card-wrapper");
+
+        card.innerHTML = `
           <div class="card">
             <div class="card-header">
               <img src="${project.image}" alt="${project.name}">
@@ -254,11 +249,32 @@ document.addEventListener("DOMContentLoaded", async () => {
             </div>
           </div>
         `;
-        grid.appendChild(link);
+
+        // CLICK EN LA CARD
+        card.addEventListener("click", () => {
+          // Si tiene video → usar modal
+          if (project.video) {
+            const modal = document.getElementById("videoModal");
+            const videoContainer = document.getElementById("videoContainer");
+
+            videoContainer.innerHTML = `
+              <video src="${project.video}" controls autoplay></video>
+            `;
+
+            modal.style.display = "flex";
+            return;
+          }
+
+          // Si tiene URL → abrir enlace
+          if (project.url) {
+            window.open(project.url, "_blank");
+          }
+        });
+
+        grid.appendChild(card);
       });
     } catch (error) {
       console.error("Error al procesar los datos del JSON:", error);
-      // También ocultamos el bloque si falla la carga
       yearTitle.style.display = "none";
       grid.style.display = "none";
     }
@@ -268,17 +284,19 @@ document.addEventListener("DOMContentLoaded", async () => {
 document.addEventListener("DOMContentLoaded", () => {
   const animatedElements = document.querySelectorAll("[data-animate]");
 
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        observer.unobserve(entry.target); // deja de observar una vez animado
-      }
-    });
-  }, {
-    threshold: 0.1 // se activa cuando el 10% del elemento es visible
-  });
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target); // deja de observar una vez animado
+        }
+      });
+    },
+    {
+      threshold: 0.1, // se activa cuando el 10% del elemento es visible
+    }
+  );
 
-  animatedElements.forEach(el => observer.observe(el));
+  animatedElements.forEach((el) => observer.observe(el));
 });
-

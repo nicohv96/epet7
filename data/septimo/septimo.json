@@ -16,5 +16,23 @@
         "name": "Reparatech",
         "url": "https://www.youtube.com/watch?v=o6CnDI5q0Xs",
         "desc": "Página de presentación para una empresa de reparación."
+    },
+    {
+        "image": "assets/img/cards/septimo/img4.webp",
+        "name": "RoseSpa",
+        "video": "assets/video/septimo/video1.webm",
+        "desc": "Página de presentación para un salon de belleza."
+    },
+    {
+        "image": "assets/img/cards/septimo/img5.webp",
+        "name": "El Crustáceo Cascarudo",
+        "url": "https://www.youtube.com/watch?v=wSgb6VdDHWc",
+        "desc": "Página de presentación para un restaurante de comida rápida."
+    },
+    {
+        "image": "assets/img/cards/septimo/img6.webp",
+        "name": "Sistema para jueguetería",
+        "video": "assets/video/septimo/video2.webm",
+        "desc": "Sistema de gestión para una jueguetería."
     }
 ]
