@@ -4,5 +4,11 @@
         "name": "Offline! Novela visual",
         "url": "https://www.youtube.com/watch?v=xOqu03H4QL4",
         "desc": "Novela visual interactiva."
+    },
+    {
+        "image": "assets/img/cards/quinto/img2.webp",
+        "name": "Bellota-Ecommerce",
+        "url": "https://www.youtube.com/watch?v=tLAGrxGQaU4",
+        "desc": "Ecommerce para un local de ropa femenina de Formosa."
     }
 ]

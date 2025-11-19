@@ -34,5 +34,23 @@
         "name": "Planeta verde",
         "url": "https://youtube.com/shorts/IxUwQRNT1MI?si=zSF6iuyDWHpRTigv",
         "desc": "Web interactiva para aprender sobre el cambio climático."
+    },
+    {
+        "image": "assets/img/cards/cuarto/img7.webp",
+        "name": "La vida con el paso de los años",
+        "url": "https://www.youtube.com/watch?v=C0ta9rrL7x0",
+        "desc": "Web interactiva para explorar sobre la vida, al musica y la tecnología de distintas epocas."
+    },
+    {
+        "image": "assets/img/cards/cuarto/img8.webp",
+        "name": "HoraBus",
+        "url": "https://www.youtube.com/watch?v=dahYSIpxKXE",
+        "desc": "Web para consultar los horarios de los colectivos urbanos."
+    },
+    {
+        "image": "assets/img/cards/cuarto/img9.webp",
+        "name": "El libro de la razón",
+        "url": "https://www.youtube.com/watch?v=P1dxh2Aq97w",
+        "desc": "Libro digital sobre poemas."
     }
 ]
